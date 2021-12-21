@@ -39,7 +39,7 @@
     display : grid;
     justify-content: center;
     align-content: center;
-    min-height: 100vh;
+    min-height: 96vh;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
@@ -123,6 +123,9 @@
 }
 
 .copyright{
-    justify-content: center;
+    display : grid;
+    justify-content: center ;
     align-content: center;
+    grid-template-columns: repeat(2, 20px);
+    margin-right: 47px;
 }
