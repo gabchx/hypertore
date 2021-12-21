@@ -73,7 +73,9 @@ class Calculateur{
     }
 }
 
-
+//window.location.href = "./calculatrice-java"
+//location.assign("./calculatrice-java");
+//window.history.pushState('', 'ok', '/tst');
 const boutonsNombres = document.querySelectorAll('[data-nombre]')
 const boutonsOperations = document.querySelectorAll('[data-operateur]')
 const boutonEgale = document.querySelector('[data-egl]')
@@ -82,10 +84,19 @@ const boutonVrgl = document.querySelector('[data-vrgl]')
 const boutonDel = document.querySelector('[data-del]')
 const stringLignePrecedente = document.querySelector('[data-operation-precedente]')
 const stringLigneActuelle = document.querySelector('[data-operation-actuelle]')
+
+//mode nuit
+document.querySelector('.checkbox').addEventListener('change',()=>{
+    document.querySelectorAll('.mode-nuit-disponible').forEach(ele=>{
+        ele.classList.toggle('nuit');
+    })
+})
+
+//notifications
 const notyf = new Notyf({
     duration : 3500,
     position : {
-        x : 'left',
+        x : 'rigth',
         y : 'top',
     }
 });
@@ -135,6 +146,4 @@ function CopierResuletat(){
     else{
         notyf.error('Pas de résultat à copié !');
     }
-            
-    
 }

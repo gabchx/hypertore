@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Calculette</title>
+    <link href = "style.css" rel = "stylesheet">
+    <script src = "script.js" defer></script>
+    <link rel = "stylesheet" href = "libraries/notyf.min.css">
+    <script src = "libraries/notyf.min.js"></script>
+    <link href='https://css.gg/clipboard.css' rel='stylesheet'>
+    <link href='https://css.gg/copyright.css' rel='stylesheet'>
+    <link href='https://css.gg/sun.css' rel='stylesheet'>
+    <link href='https://css.gg/moon.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="filtre-nuit mode-nuit-disponible">
+        <div class="bouton-nuit">
+            <input type="checkbox" class="checkbox" id="mode-nuit">
+            <label for="mode-nuit" class="label">
+              <i class="gg-moon"></i>
+              <i class="gg-sun"></i>
+              <div class="glisseur mode-nuit-disponible"></div>
+            </label>
+        </div>
+
+        <div class = "calculette-grille mode-nuit-disponible">
+            <div class = "output">
+             <button button-copy onclick = "CopierResuletat()" class="gg-clipboard"></button>
+             <div data-operation-precedente class = "operation-precedente"></div>
+             <div data-operation-actuelle class = "operation-actuelle" id = "source-de-copie"></div>
+            </div>
+            <button data-ac class = "bouton-ac">AC</button>
+            <button data-del class = "bouton-del">DEL</button>
+            <button data-operateur class = "operateur">÷</button>
+            <button data-nombre class = "nombre">1</button>
+            <button data-nombre class = "nombre">2</button>
+            <button data-nombre class = "nombre">3</button>
+            <button data-operateur class = "operateur">*</button>
+            <button data-nombre class = "nombre">4</button>
+            <button data-nombre class = "nombre">5</button>
+            <button data-nombre class = "nombre">6</button>
+            <button data-operateur class = "operateur">+</button>
+            <button data-nombre class = "nombre">7</button>
+            <button data-nombre class = "nombre">8</button>
+            <button data-nombre class = "nombre">9</button>
+            <button data-operateur class = "operateur">-</button>
+            <button data-nombre class = "bouton-vrgl">.</button>
+            <button data-nombre class = "nombre">0</button>
+            <button data-egl class = "bouton-egl">=</button>
+        </div>
+
+        <div class = "copyright">
+            <div><i class="gg-copyright"></i></div>
+            <div>Hypertore</div>
+        </div>
+
+    </div>
+</body>
+</html>
