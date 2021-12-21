@@ -1,0 +1,131 @@
+ *,* ::before, *::after {
+    box-sizing: border-box;
+    font-family: GothamRoundedBook, sans-serif;
+    font-weight: normal;
+ }
+
+
+ @font-face
+ {
+     font-family: 'GothamRoundedBook';
+     src: url('font/GothamRoundedBook.ttf');
+
+     /*font-family: 'GothamRoundedBold';
+     src: url('font/GothamRoundedBold.ttf');*/
+ }
+
+ body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d58b);
+    background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.calculette-grille{
+    display : grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 96vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculette-grille > button {
+    cursor: pointer;
+    font-size: 2.2rem;
+    border:  1px solid #0000000e;
+    outline : none;
+    background-color : rgba(212, 212, 212, 0.75);
+}
+
+.output{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    grid-column: 1 / -1;
+    background-color : rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .operation-precedente{
+    color:rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+.output .operation-actuelle{
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+}
+.button-vrgl{
+    border-bottom-left-radius: 15px;
+}
+.button-egl{
+    grid-column: span 2;
+    border-bottom-right-radius: 15px;
+}
+.button-ac{
+    grid-column: span 2;
+    background-color: #e73c7e;
+}
+
+.button-ac:hover{
+    background-color : rgb(221, 47, 47);
+}
+
+.nombre:hover{
+    background-color : rgba(255, 255, 255, 0.797);
+}
+
+.operateur:hover{
+    background-color : rgba(153, 223, 255, 0.748);
+}
+
+.button-vrgl:hover{
+    background-color : rgb(100, 100, 100);
+}
+.button-del:hover{
+    background-color : rgb(173, 131, 67);
+}
+
+.button-egl:hover{
+    background-color : rgb(90, 155, 77);
+}
+
+.gg-clipboard {
+    cursor: copy;
+    margin-right: 360px;
+    margin-top: 0px;
+    background-color : rgba(255, 255, 255, 0.795);
+    color :rgba(39, 39, 39, 0.897);
+}
+
+.gg-clipboard:hover{
+    color : rgba(0, 0, 0, 0.836);
+    background-color :rgb(255, 255, 255);
+}
+
+.copyright{
+    display : grid;
+    justify-content: center ;
+    align-content: center;
+    grid-template-columns: repeat(2, 20px);
+    margin-right: 47px;
+}
