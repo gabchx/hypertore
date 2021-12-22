@@ -73,9 +73,7 @@ class Calculateur{
     }
 }
 
-//window.location.href = "./calculatrice-java"
-//location.assign("./calculatrice-java");
-//window.history.pushState('', 'ok', '/tst');
+//Calculette
 const boutonsNombres = document.querySelectorAll('[data-nombre]')
 const boutonsOperations = document.querySelectorAll('[data-operateur]')
 const boutonEgale = document.querySelector('[data-egl]')
@@ -84,6 +82,7 @@ const boutonVrgl = document.querySelector('[data-vrgl]')
 const boutonDel = document.querySelector('[data-del]')
 const stringLignePrecedente = document.querySelector('[data-operation-precedente]')
 const stringLigneActuelle = document.querySelector('[data-operation-actuelle]')
+const calculateur = new Calculateur(stringLigneActuelle,stringLignePrecedente)
 
 //mode nuit
 document.querySelector('.checkbox').addEventListener('change',()=>{
@@ -101,8 +100,34 @@ const notyf = new Notyf({
     }
 });
 
-
-const calculateur = new Calculateur(stringLigneActuelle,stringLignePrecedente)
+//entrée clavier
+window.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    console.log(event.key)
+    if ((event.key == 1)||(event.key == 2)||(event.key == 3)||(event.key == 4)||
+    (event.key == 5)||(event.key == 6)||(event.key == 7)||(event.key == 8)||
+    (event.key == 9)||(event.key == 0)||(event.key == "+")||(event.key == "-")||
+    (event.key == "*")||(event.key == "/")||(event.key == "=")){
+        document.getElementById("b"+event.key).click();
+    }
+    if (event.key == "Enter"){
+        document.getElementById("b=").click();
+    }
+    if (event.key == "Backspace"){
+        document.getElementById("bdel").click();
+    }
+    if (event.key == "Escape"){
+        document.getElementById("bac").click();
+    }
+    //Ajouter une fonction asychrone??
+    if ((event.keyCode==17)||(event.keyCode==91)||(event.keyCode==93)) {
+        window.addEventListener("keyup", function(event2) {
+            if ((event2.keyCode==91)){
+                CopierResuletat();
+            }
+        })
+    }
+});
 
 boutonsNombres.forEach(bouton => {
     bouton.addEventListener('click', () => {
