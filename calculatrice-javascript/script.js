@@ -120,12 +120,8 @@ window.addEventListener("keyup", function(event) {
         document.getElementById("bac").click();
     }
     //Ajouter une fonction asychrone??
-    if ((event.keyCode==17)||(event.keyCode==91)||(event.keyCode==93)) {
-        window.addEventListener("keyup", function(event2) {
-            if ((event2.keyCode==91)){
-                CopierResuletat();
-            }
-        })
+    if ((event.key=="Control")||(event.key=="Meta"){
+        CopierResuletat();
     }
 });
 
