@@ -38,9 +38,9 @@
     display : grid;
     justify-content: center;
     align-content: center;
-    min-height: 93vh;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    min-height: 91vh;
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 90px);
     
 }
 
@@ -122,7 +122,7 @@
 
 .gg-clipboard {
     cursor: copy;
-    margin-right: 360px;
+    margin-right: 318px;
     margin-top: 0px;
     background-color : rgba(255, 255, 255, 0.795);
     color :rgba(39, 39, 39, 0.897);
@@ -139,6 +139,7 @@
     align-content: center;
     grid-template-columns: repeat(2, 20px);
     margin-right: 47px;
+    padding-bottom: 0px;
 }
 
 
